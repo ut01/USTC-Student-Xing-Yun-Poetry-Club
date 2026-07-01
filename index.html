@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>中国科大学生星云诗社 · USTC Xing Yun Poetry Club</title>
+<meta name="description" content="中国科大星云诗社传承中国诗歌文化、传播诗歌魅力。USTC Xing Yun Poetry Club preserves Chinese poetic culture and spreads its captivating charm." />
+<meta property="og:title" content="中国科大学生星云诗社 · USTC Xing Yun Poetry Club" />
+<meta property="og:description" content="传承中国诗歌文化，传播诗歌魅力。Preserving Chinese poetic culture and spreading its charm." />
+<meta property="og:image" content="assets/logo.png" />
+<meta property="og:type" content="website" />
+<link rel="icon" type="image/png" href="assets/logo.png" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@300;400;500;600;700&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet" />
+<style>
+  :root {
+    --ink: #23202b;
+    --ink-soft: #4a4654;
+    --ink-faint: #877f92;
+    --paper: #f7f3ec;
+    --paper-2: #efe8dc;
+    --line: #ddd3c4;
+    --nebula-1: #4b3f7a;
+    --nebula-2: #6d4d8f;
+    --accent: #7a5cae;
+    --accent-deep: #40356b;
+    --gold: #b08a4a;
+    --max: 1080px;
+  }
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    margin: 0;
+    font-family: "Noto Serif SC", "Songti SC", serif;
+    color: var(--ink);
+    background: var(--paper);
+    line-height: 1.85;
+    -webkit-font-smoothing: antialiased;
+  }
+  .en { font-family: "Cormorant Garamond", "Noto Serif SC", serif; }
+  a { color: var(--accent-deep); text-decoration: none; transition: color .2s; }
+  a:hover { color: var(--accent); }
+  .wrap { max-width: var(--max); margin: 0 auto; padding: 0 28px; }
+  section { padding: 84px 0; border-bottom: 1px solid var(--line); }
+  section:last-of-type { border-bottom: none; }
+
+  /* ---------- Hero ---------- */
+  .hero {
+    position: relative;
+    color: #f3eefb;
+    text-align: center;
+    padding: 118px 28px 104px;
+    background:
+      radial-gradient(1200px 520px at 20% -10%, rgba(150,110,200,.55), transparent 60%),
+      radial-gradient(900px 480px at 88% 8%, rgba(90,140,210,.42), transparent 62%),
+      radial-gradient(700px 700px at 60% 120%, rgba(180,140,90,.28), transparent 60%),
+      linear-gradient(160deg, #1c1830 0%, #2c2450 46%, #3a2c5e 100%);
+    border-bottom: none;
+    overflow: hidden;
+  }
+  .hero::after {
+    content: "";
+    position: absolute; inset: 0;
+    background-image:
+      radial-gradient(1.4px 1.4px at 12% 30%, #fff, transparent),
+      radial-gradient(1.4px 1.4px at 30% 66%, #fff, transparent),
+      radial-gradient(1.2px 1.2px at 48% 22%, #e9e2ff, transparent),
+      radial-gradient(1.6px 1.6px at 66% 54%, #fff, transparent),
+      radial-gradient(1.2px 1.2px at 78% 30%, #d9e6ff, transparent),
+      radial-gradient(1.3px 1.3px at 88% 72%, #fff, transparent),
+      radial-gradient(1.1px 1.1px at 22% 82%, #fff, transparent),
+      radial-gradient(1.2px 1.2px at 58% 84%, #efe9ff, transparent);
+    opacity: .8;
+    pointer-events: none;
+  }
+  .hero-inner { position: relative; z-index: 1; }
+  .hero img.logo {
+    width: 128px; height: 128px; object-fit: contain;
+    border-radius: 50%;
+    background: rgba(255,255,255,.9);
+    padding: 14px;
+    box-shadow: 0 12px 40px rgba(0,0,0,.35);
+    margin-bottom: 30px;
+  }
+  .hero h1 {
+    font-weight: 600;
+    font-size: clamp(2rem, 5vw, 3.1rem);
+    margin: 0 0 6px;
+    letter-spacing: .18em;
+  }
+  .hero .en-title {
+    font-size: clamp(1rem, 2.4vw, 1.5rem);
+    letter-spacing: .12em;
+    color: #cdbff0;
+    font-weight: 500;
+    margin-bottom: 26px;
+  }
+  .hero .tagline {
+    max-width: 640px; margin: 0 auto;
+    font-size: 1.06rem; color: #e7ddff;
+  }
+  .hero .tagline .en { display: block; font-style: italic; color: #bcb0dd; font-size: 1rem; margin-top: 4px; }
+  .hero .badges { margin-top: 32px; display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; }
+  .badge {
+    display: inline-flex; align-items: center; gap: 7px;
+    background: rgba(255,255,255,.1);
+    border: 1px solid rgba(255,255,255,.22);
+    color: #efe9ff;
+    padding: 7px 16px; border-radius: 100px; font-size: .9rem;
+    backdrop-filter: blur(4px);
+  }
+
+  /* ---------- Section headings ---------- */
+  .sec-head { text-align: center; margin-bottom: 52px; }
+  .sec-head .kicker {
+    font-family: "Cormorant Garamond", serif;
+    text-transform: uppercase; letter-spacing: .32em;
+    font-size: .82rem; color: var(--gold); font-weight: 600;
+  }
+  .sec-head h2 {
+    font-size: clamp(1.5rem, 3.2vw, 2.1rem);
+    margin: 8px 0 0; font-weight: 600; letter-spacing: .1em;
+  }
+  .sec-head .rule { width: 46px; height: 2px; background: var(--gold); margin: 18px auto 0; opacity: .7; }
+
+  /* ---------- Overview ---------- */
+  .overview p { font-size: 1.08rem; color: var(--ink-soft); margin: 0 0 20px; text-align: justify; }
+  .overview .en { color: var(--ink-faint); font-size: 1.02rem; }
+
+  /* ---------- Presidents ---------- */
+  .presidents { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 18px; }
+  .pres-card {
+    background: var(--paper-2);
+    border: 1px solid var(--line);
+    border-radius: 12px;
+    padding: 24px 20px;
+    text-align: center;
+    transition: transform .2s, box-shadow .2s;
+  }
+  .pres-card:hover { transform: translateY(-4px); box-shadow: 0 14px 30px rgba(60,45,90,.12); }
+  .pres-card .term { font-family: "Cormorant Garamond", serif; font-size: 1.15rem; color: var(--accent); font-weight: 600; }
+  .pres-card .name { font-size: 1.3rem; font-weight: 600; margin: 8px 0 4px; }
+  .pres-card .grade { font-size: .88rem; color: var(--ink-faint); }
+  .pres-card.founder { border-color: var(--gold); background: linear-gradient(180deg, #f7efdf, var(--paper-2)); }
+  .pres-card.founder .crown { color: var(--gold); font-size: .8rem; letter-spacing: .18em; font-family: "Cormorant Garamond", serif; text-transform: uppercase; }
+
+  /* ---------- Timeline ---------- */
+  .timeline { position: relative; max-width: 780px; margin: 0 auto; }
+  .tl-year { display: flex; align-items: center; gap: 16px; margin: 44px 0 22px; }
+  .tl-year:first-child { margin-top: 0; }
+  .tl-year span {
+    font-family: "Cormorant Garamond", serif; font-size: 2rem; font-weight: 600;
+    color: var(--accent-deep); letter-spacing: .04em;
+  }
+  .tl-year .bar { flex: 1; height: 1px; background: var(--line); }
+  .tl-item { position: relative; padding: 0 0 20px 30px; border-left: 2px solid var(--line); margin-left: 6px; }
+  .tl-item::before {
+    content: ""; position: absolute; left: -7px; top: 8px;
+    width: 12px; height: 12px; border-radius: 50%;
+    background: var(--paper); border: 2px solid var(--accent);
+  }
+  .tl-item.key::before { background: var(--gold); border-color: var(--gold); box-shadow: 0 0 0 4px rgba(176,138,74,.18); }
+  .tl-date { font-family: "Cormorant Garamond", serif; font-weight: 600; color: var(--accent); font-size: .95rem; }
+  .tl-text { color: var(--ink-soft); }
+  .tl-more { text-align: center; margin-top: 30px; color: var(--ink-faint); font-size: .95rem; }
+
+  /* ---------- Honorary members ---------- */
+  .honor-group { margin-bottom: 30px; }
+  .honor-group h3 {
+    font-size: 1.05rem; color: var(--accent-deep); margin: 0 0 12px;
+    display: flex; align-items: baseline; gap: 12px;
+  }
+  .honor-group h3 .yr { font-family: "Cormorant Garamond", serif; font-size: 1.4rem; color: var(--gold); }
+  .names { display: flex; flex-wrap: wrap; gap: 8px; }
+  .names span {
+    background: var(--paper-2); border: 1px solid var(--line);
+    padding: 5px 13px; border-radius: 100px; font-size: .96rem; color: var(--ink-soft);
+  }
+  .names span.star { border-color: var(--gold); color: var(--accent-deep); font-weight: 500; }
+  .honor-note { text-align: center; color: var(--ink-faint); font-size: .9rem; margin-top: 18px; font-style: italic; }
+
+  /* ---------- Gallery ---------- */
+  .gallery { display: grid; grid-template-columns: 1.6fr 1fr; gap: 20px; }
+  .gallery figure { margin: 0; }
+  .gallery img { width: 100%; height: 100%; object-fit: cover; border-radius: 12px; border: 1px solid var(--line); display: block; }
+  .gallery figcaption { font-size: .85rem; color: var(--ink-faint); text-align: center; margin-top: 10px; }
+  .g-stack { display: grid; gap: 20px; }
+
+  /* ---------- Join ---------- */
+  .join { background: var(--paper-2); }
+  .join-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: center; }
+  .growth { text-align: center; }
+  .growth .num { font-family: "Cormorant Garamond", serif; font-size: 4.2rem; font-weight: 600; color: var(--accent-deep); line-height: 1; }
+  .growth .label { color: var(--ink-faint); letter-spacing: .1em; margin-top: 6px; }
+  .growth .delta { margin-top: 14px; color: var(--ink-soft); font-size: .95rem; }
+  .growth .delta b { color: var(--gold); }
+  .contacts { display: grid; gap: 14px; }
+  .contact-row {
+    display: flex; align-items: center; gap: 14px;
+    background: var(--paper); border: 1px solid var(--line); border-radius: 12px; padding: 16px 20px;
+  }
+  .contact-row .ic { font-size: 1.4rem; }
+  .contact-row .k { font-size: .82rem; color: var(--ink-faint); letter-spacing: .06em; }
+  .contact-row .v { font-size: 1.05rem; font-weight: 500; }
+
+  /* ---------- Footer ---------- */
+  footer {
+    background: linear-gradient(160deg, #221d38, #2c2450);
+    color: #cdc3e6; text-align: center; padding: 54px 28px;
+  }
+  footer .flogo { width: 56px; opacity: .9; margin-bottom: 16px; }
+  footer p { margin: 6px 0; font-size: .92rem; }
+  footer a { color: #d9ccff; }
+  footer .fine { color: #8f85ad; font-size: .82rem; margin-top: 18px; }
+
+  @media (max-width: 720px) {
+    section { padding: 60px 0; }
+    .gallery, .join-grid { grid-template-columns: 1fr; }
+    .hero { padding: 90px 22px 78px; }
+  }
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="hero-inner">
+    <img class="logo" src="assets/logo.png" alt="星云诗社 Logo" />
+    <h1>星 云 诗 社</h1>
+    <div class="en-title en">USTC Xing Yun Poetry Club</div>
+    <p class="tagline">
+      传承中国诗歌文化，传播诗歌魅力。
+      <span class="en">Preserving Chinese poetic culture and spreading its captivating charm.</span>
+    </p>
+    <div class="badges">
+      <span class="badge">✦ 中国科学技术大学 · USTC</span>
+      <span class="badge">★ 三星级社团</span>
+      <span class="badge">成立于 2021.09.05</span>
+    </div>
+  </div>
+</header>
+
+<section class="overview">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="kicker">Overview</div>
+      <h2>诗 社 简 介</h2>
+      <div class="rule"></div>
+    </div>
+    <p>中国科大星云诗社从 2020 年 11 月 18 日开始筹备，于 2021 年 9 月 5 日正式成立，是校内唯一一家专门研究中国诗歌——包括古体诗和现代诗——的社团。星云诗社人以"在科大传承诗歌文化，传播诗歌魅力"为己任，自创立以来就致力于校内诗歌艺术的普及和诗歌氛围的建设，鼓励、支持、引导社员们创作与鉴赏中国诗歌等文学作品，为科大培养具有深厚诗歌素养、全面发展的学子。</p>
+    <p class="en">The USTC Xing Yun Poetry Club began preparations on November 18, 2020, and was officially established on September 5, 2021. It is the only club on campus devoted exclusively to the study of Chinese poetry — both classical and modern. Embracing the mission of "inheriting poetry culture at USTC and spreading the charm of poetry," the club has, since its founding, been committed to popularizing the art of poetry on campus and cultivating a vibrant poetic atmosphere.</p>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="kicker">Leadership</div>
+      <h2>历 任 社 长</h2>
+      <div class="rule"></div>
+    </div>
+    <div class="presidents">
+      <div class="pres-card founder">
+        <div class="crown">Founding President</div>
+        <div class="name">吴叩天</div>
+        <div class="grade">2020 级本科生 · 创始社长</div>
+        <div class="term">2020 – 2022</div>
+      </div>
+      <div class="pres-card">
+        <div class="name">李浩源</div>
+        <div class="grade">2020 级</div>
+        <div class="term">2022 – 2023</div>
+      </div>
+      <div class="pres-card">
+        <div class="name">周石</div>
+        <div class="grade">2021 级</div>
+        <div class="term">2023 – 2024</div>
+      </div>
+      <div class="pres-card">
+        <div class="name">施懿</div>
+        <div class="grade">2022 级</div>
+        <div class="term">2024 – 2025</div>
+      </div>
+      <div class="pres-card">
+        <div class="name">侯星圻</div>
+        <div class="grade">2023 级</div>
+        <div class="term">2025 – 2026</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="kicker">Chronicle</div>
+      <h2>星 云 · 大 事 记</h2>
+      <div class="rule"></div>
+    </div>
+    <div class="timeline">
+      <div class="tl-year"><span>2020</span><div class="bar"></div></div>
+      <div class="tl-item key">
+        <div class="tl-date">11 月 18 日</div>
+        <div class="tl-text">USTC 诗词协会成立，"每日一诗"纳入日程——星云的起点。</div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-date">11 月 30 日</div>
+        <div class="tl-text">社内投票选出诗社名称"星云诗社"。</div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-date">12 月 7 日</div>
+        <div class="tl-text">黄鹤老师同意成为星云诗社指导老师。</div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-date">12 月 20 日</div>
+        <div class="tl-text">诗社主要负责人架构创建。</div>
+      </div>
+
+      <div class="tl-year"><span>2021</span><div class="bar"></div></div>
+      <div class="tl-item">
+        <div class="tl-date">1 月 30 日</div>
+        <div class="tl-text">诗社 Logo 设计完成（安佳文、刘阳、吴叩天）。</div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-date">2 月</div>
+        <div class="tl-text">学术部、宣传部初步明确职能与组织架构。</div>
+      </div>
+      <div class="tl-item key">
+        <div class="tl-date">3 月 25 日</div>
+        <div class="tl-text">诗社第一次转正答辩通过。</div>
+      </div>
+      <div class="tl-item key">
+        <div class="tl-date">9 月 5 日</div>
+        <div class="tl-text">第二次成立答辩通过，星云诗社正式成立。</div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-date">9 月 17–19 日</div>
+        <div class="tl-text">游园会开幕式与游园会圆满举办。</div>
+      </div>
+      <div class="tl-item key">
+        <div class="tl-date">10 月 23 日</div>
+        <div class="tl-text">第一次周常活动——诗歌沙龙成功举办。</div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-date">11 月 18 日</div>
+        <div class="tl-text">诗社交流群建群一周年。</div>
+      </div>
+
+      <div class="tl-year"><span>2022</span><div class="bar"></div></div>
+      <div class="tl-item">
+        <div class="tl-date">1 – 2 月</div>
+        <div class="tl-text">寒假诗歌"小打卡"项目开启，积分制激励每日创作与鉴赏。</div>
+      </div>
+    </div>
+    <p class="tl-more">— 完整大事记见 <a href="docs/星云·大事记.md">项目仓库 docs/</a> —</p>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="kicker">Honorary Members</div>
+      <h2>荣 誉 社 员</h2>
+      <div class="rule"></div>
+    </div>
+    <p class="overview" style="text-align:center;color:var(--ink-faint);max-width:640px;margin:0 auto 40px;">对为诗社发展做出重要贡献的社员，经集体评选后授予"荣誉社员"称号，永久记录于诗社章程。</p>
+
+    <div class="honor-group">
+      <h3><span class="yr">2020</span>创始成员</h3>
+      <div class="names">
+        <span class="star">吴叩天 · 创始社长</span>
+        <span class="star">黄鹤 · 指导教师</span>
+        <span>徐小航</span><span>王佳钰</span><span>陈一龙</span><span>杨航宇</span><span>刘阳</span>
+      </div>
+    </div>
+
+    <div class="honor-group">
+      <h3><span class="yr">2021</span>入社</h3>
+      <div class="names">
+        <span class="star">李浩源 · 第二任社长</span>
+        <span>王适源</span><span>李妍霓</span><span>苏启晟</span><span>王希彤</span><span>李怡欣</span><span>石梁</span><span>李牧琛</span><span>赵博文</span><span>刘畅</span><span>包恒易</span><span>王建新</span><span>安佳文</span><span>钱力</span><span>俞承霖</span><span>葛子聪</span><span>汪路涵</span><span>周潮</span><span>代睿珂</span><span>王涵</span><span>姚帅廷</span><span>肖元</span><span>付健</span><span>母子跃</span><span>徐博</span><span>付乐豪</span><span>钟儒天</span>
+      </div>
+    </div>
+
+    <div class="honor-group">
+      <h3><span class="yr">2022</span>入社</h3>
+      <div class="names"><span>肖元</span><span>黄禺冠</span></div>
+    </div>
+
+    <div class="honor-group">
+      <h3><span class="yr">2024</span>入社</h3>
+      <div class="names"><span>施懿</span><span>杨若曦</span><span>任蓁华</span><span>李奥鹏</span></div>
+    </div>
+    <p class="honor-note">本名单将定期更新，每年春季进行评审和补充。排名不分先后。</p>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="kicker">Moments</div>
+      <h2>诗 社 掠 影</h2>
+      <div class="rule"></div>
+    </div>
+    <div class="gallery">
+      <figure>
+        <img src="assets/salon-2021.jpg" alt="星云杯诗歌比赛颁奖仪式暨诗歌沙龙" loading="lazy" />
+        <figcaption>"星云杯"诗歌比赛颁奖仪式暨诗歌沙龙 · 2021.12.18</figcaption>
+      </figure>
+      <div class="g-stack">
+        <figure>
+          <img src="assets/qq-group.jpg" alt="星云诗社 QQ 交流群" loading="lazy" />
+          <figcaption>诗社 QQ 交流群</figcaption>
+        </figure>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="join">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="kicker">Join Us</div>
+      <h2>加 入 星 云</h2>
+      <div class="rule"></div>
+    </div>
+    <div class="join-grid">
+      <div class="growth">
+        <div class="num">1204</div>
+        <div class="label">社员及诗友 · MEMBERS</div>
+        <div class="delta">从创社日 <b>1</b> 人 (2020.11.18) 到 <b>1204</b> 人 (2025.07.12)</div>
+      </div>
+      <div class="contacts">
+        <a class="contact-row" href="https://www.linkedin.com/company/105929419/" target="_blank" rel="noopener">
+          <span class="ic">in</span>
+          <span><span class="k">LinkedIn</span><br /><span class="v">USTC Xing Yun Poetry Club</span></span>
+        </a>
+        <div class="contact-row">
+          <span class="ic">💬</span>
+          <span><span class="k">QQ 交流群</span><br /><span class="v">837255180</span></span>
+        </div>
+        <a class="contact-row" href="https://mp.weixin.qq.com/s/1eiKsI-LtHZQVlkXHX5-VA" target="_blank" rel="noopener">
+          <span class="ic">📰</span>
+          <span><span class="k">官媒报道</span><br /><span class="v">中国科大社团管理指导委员会</span></span>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <img class="flogo" src="assets/logo.png" alt="星云诗社" />
+  <p>中国科大学生星云诗社 · USTC Student Xing Yun Poetry Club</p>
+  <p>传承中国诗歌文化，传播诗歌魅力</p>
+  <p class="fine">© 2020–2026 星云诗社 · Hosted by <a href="https://github.com/ut01">ut01</a> · Source on <a href="https://github.com/ut01/USTC-Student-Xing-Yun-Poetry-Club">GitHub</a></p>
+</footer>
+
+</body>
+</html>
